@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-size: 2rem;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(-13deg, #586fa1, #8c579a, rgb(230, 94, 94));
+    padding: 20px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    margin: 500px auto;
+    padding: 40px 30px 80px;
+    border-radius: 20px;
+}
+
+.todo-app .top {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.todo-app .top h4 {
+    color: #002765;
+    display: flex;
+    align-self: center;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.todo-app h4 img {
+    width: 80px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 50px;
+    padding-left: 30px;
+    margin-bottom: 60px;
+    height: 95px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    font-weight: 17px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    cursor: pointer;
+    height: 95px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+ul {
+    position: relative;
+    margin-bottom: 60px;
+    /* Ensure the pseudo-element is positioned relative to the ul */
+}
+
+ul li {
+    list-style: none;
+    font-weight: 200;
+    font-size: 1.7rem;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding-left: 10%;
+    margin-bottom: 50px;
+    width: 85%;
+    /* Set a specific width for the list item */
+    word-wrap: break-word;
+    /* Allow text to wrap within the width */
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+}
+
+li img {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    left: 0.1px;
+    top: -8px;
+}
+
+ul li span {
+    position: absolute;
+    right: -130px;
+    top: -25px;
+    width: 90px;
+    height: 90px;
+    font-size: 2rem;
+    color: #555;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+}
